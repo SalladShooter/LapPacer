@@ -143,8 +143,9 @@ select {
   margin-right: 2em;
   border-right: 0.1em solid var(--text);
   border-top: 0.1em solid var(--text);
-  width: 7.5em;
+  width: min(15vw, 7.5em);
   display: table-cell;
+  font-size: min(2.5vw, 1em);
 }
 
 #table tr:first-child * {
