@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --back: #222233;
+    --light-back: #444455;
+    --main: #5566ab;
+    --light-main: #6677bc;
+    --text: #eef;
+    --light-text: #eef;
+    --round: 100em;
+    --slight-round: 0.25em;
+    --padding: 0.5em;
+    --margin: 0.5em;
+    --font: 'Poppins', Arial;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --back: #dde;
+    --light-back: #eef;
+    --main: #5566ab;
+    --light-main: #6677bc;
+    --text: #222233;
+    --light-text: #eef;
+    --round: 100em;
+    --slight-round: 0.25em;
+    --padding: 0.5em;
+    --margin: 0.5em;
+    --font: 'Poppins', Arial;
+  }
+}
+
+body {
+  background: var(--back);
+  color: var(--text);
+  font-family: var(--font);
+  position: relative;
+  font-size: max(1vh, 1em);
+}
+
+#header {
+  text-align: center;
+  font-size: max(5vh, 2em);
+}
+
+#main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: var(--margin);
+}
+
+#distance, #lap-distance, #hours, #minutes, #seconds {
+  border-radius: var(--round);
+  background: var(--light-back);
+  border: none;
+  color: var(--text);
+  padding: var(--padding);
+  margin: var(--margin);
+  position: relative;
+}
+
+#distance, #lap-distance {
+  max-width: max(2vh, 5em);
+  tex-align: center;
+}
+
+#hours, #minutes, #seconds {
+  max-width: max(2vh, 2em);
+  text-align: center;
+}
+
+select {
+  border-radius: var(--slight-round);
+  background: var(--light-back);
+  border: none;
+  color: var(--text);
+  padding: var(--padding);
+  margin: var(--margin);
+}
+
+#submit {
+  border-radius: var(--round);
+  background: var(--main);
+  border: none;
+  color: var(--light-text);
+  padding: calc(var(--padding) * 2);
+  margin: calc(var(--margin) + 5vh);
+  transition: all 0.1s ease-in-out;
+  transform: scale(1);
+  width: 10em;
+  font-weight: bold;
+}
+
+#submit:hover {
+  transform: scale(1.05);
+  background: var(--light-main);
+}
+
+#table {
+  border-radius: var(--slight-round);
+  border: 0.1em solid var(--text);
+  padding: 0;
+  border-collapse: seperate;
+  border-spacing: 0;
+  table-layout: fixed;
+  margin-bottom: 10vh;
+}
+
+#table tr:first-child *:first-child {
+  border-top-left-radius: var(--slight-round);
+}
+
+#table tr:first-child *:last-child {
+  border-top-right-radius: var(--slight-round);
+}
+
+#table tr:last-child *:first-child {
+  border-bottom-left-radius: var(--slight-round);
+}
+
+#table tr:last-child *:last-child {
+  border-bottom-right-radius: var(--slight-round);
+}
+
+#table tr:first-child th:nth-child(even) {
+  background: var(--main);
+}
+
+#table tr:first-child th:nth-child(odd) {
+  background: var(--light-main);
+}
+
+#table tr * {
+  padding: var(--padding);
+  margin: var(--margin);
+  margin-left: 2em;
+  margin-right: 2em;
+  border-right: 0.1em solid var(--text);
+  border-top: 0.1em solid var(--text);
+  width: 7.5em;
+  display: table-cell;
+}
+
+#table tr:first-child * {
+  border-top: none;
+  color: var(--light-text);
+}
+
+#table tr *:last-child {
+  border-right: none;
+}
+
+#table th:last-child {
+  border-right: none;
+}

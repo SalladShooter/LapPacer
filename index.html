@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lap Pacer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header">
+    <h1>Lap Pacer</h1>
+  </header>
+
+  <main id="main">
+    <label for="distance" id="distance-label">Distance:
+      <input placeholder="5" id="distance"></input>
+      <select name="distance" id="distance-type">
+        <option value="km">kilometers</option>
+        <option value="mi">miles</option>
+        <option value="m">meters</option>
+        <option value="ft">feet</option>
+      </select>
+    </label>
+    <label for="lap-distance" id="laps-label">Lap Distance:
+      <input placeholder="400" id="lap-distance"></input>
+      <select name="lap-distance" id="lap-type">
+        <option value="m">meters</option>
+        <option value="ft">feet</option>
+        <option value="km">kilometers</option>
+        <option value="mi">miles</option>
+      </select>
+    </label>
+    <label for="time" id="time">Total Time:
+      <input placeholder="0" id="hours"></input>hours : <input placeholder="15" id="minutes"></input>minutes : <input placeholder="0.0" id="seconds"></input>seconds
+    </label>
+    <button type="submit" id="submit" onClick="submit()">Submit</button>
+    <table id="table">
+      <tr>
+        <th>Lap #</th>
+        <th>Lap Distance</th>
+        <th>Total Distance</th>
+        <th>Lap Time</th>
+        <th>Total Time</th>
+      </tr>
+    </table>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
